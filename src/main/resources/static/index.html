@@ -1,0 +1,110 @@
+<html>
+
+<head>
+	<title>Simple Stock Analysis</title>
+	<script src="js/jquery.js"></script>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Simple Stock Analysis">
+	<meta name="keywords" content="stock ticker analysis, stock ticker analyzer">
+	<meta name="author" content="Khim Ung">
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-62290098-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>	
+	
+	<script>
+	
+		$( document ).ready(function() {
+		    console.log( "ready!" );
+		});
+	
+		function addMoreTicker() {
+			$('#moretickers').append("<input name='tickers' value='' /></br>");
+		}
+		
+	</script>
+</head>
+
+<body style="padding:5px;">
+
+<div style="position:relative;">
+	<div style="float:left;text-align:center;">
+		<div style="width:50%;padding:20px;background-color: FFFFdd;text-align:left;">
+			<p>Simple stock ticker analyzer</p>
+			
+			<label>Generate Your Own Ticker Report</label>
+			<form method="POST" action="/stock/parse">
+			
+				<label for="startDate">Start Date</label>
+				<div>
+				<input name="startDate" value=""  placeholder="20151201" />
+				</div>
+				
+				<label for="endDate">End Date</label>	
+				<div>
+				<input name="endDate" value="" placeholder="20151201" />
+				</div>	
+				
+				<label for="tickers">Tickers</label>
+				<div>
+				<input name="tickers" value="" />
+				</div>
+				
+				<div id="moretickers"></div>
+				
+				<p><a href="javascript:addMoreTicker();">Add Ticker</a></p>
+				
+				<p><input type="submit"/></p>
+			</form>
+		</div>
+		<div style="padding:20px;text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- small embeded -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-2178827339426285"
+     data-ad-slot="1396635919"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>		
+		</div>
+		<div style="padding:20px;background-color: FFFFdd;text-align:center;">
+			<p>
+				<a href="/stock/parse?tickers=CSCO&tickers=ARMH&tickers=FSL&tickers=MXIM&tickers=INVN&tickers=QCOM&tickers=RKUS&tickers=SSNI&tickers=TEL&tickers=AAPL&tickers=GOOG">
+				Analyze Default Tickers CSCO, ARMH, FSL, MXIM, INVN, QCOM, RKUS, SSNI, TEL, AAPL, GOOG
+				</a>
+			</p>
+			
+			<a href="/stock/history">
+				<div style="padding:10px; border:1px;background-color:white;">Generate Report</div>
+			</a>
+
+		</div>
+	</div>
+	
+	<div style="padding:20px;">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- myblog -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-2178827339426285"
+     data-ad-slot="9373601116"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	
+
+
+</div>
+
+</body>
+</html>
